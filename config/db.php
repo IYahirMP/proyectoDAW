@@ -9,3 +9,5 @@ class Database
         return $db;
     }
 }
+
+//Me toca trabajar con la tabla organigrama

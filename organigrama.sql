@@ -1,0 +1,9 @@
+CREATE TABLE organigrama (
+    ID_ORGANIGRAMA int(11) NOT NULL,
+    AREA varchar(60) NOT NULL,
+    DESCRIPCION text NOT NULL,
+    AREA_DEPENDE text NOT NULL,
+    NIVEL int(11) NOT NULL,
+    TIPO_AREA int(11) NOT NULL,
+    TITULAR varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
