@@ -2,6 +2,9 @@
 
 //Se incluye el método que carga controladores controllers_autoload
 require_once "autoload.php";
+require_once "config/db.php";
+require_once "views/layouts/header.php";
+require_once "views/layouts/aside.php";
 
 //Si está definidio el parámetro controller en la URL
 if (isset($_GET["controller"])) {
@@ -27,3 +30,5 @@ if (class_exists($nombre_controlador)) {
 } else {
     echo "La pagina que buscas no existe";
 }
+
+require_once "views/layouts/footer.php";
