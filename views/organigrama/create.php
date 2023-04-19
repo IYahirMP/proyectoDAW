@@ -1,7 +1,7 @@
 <h1>Crear organigrama</h1>
 
 <h4 class="mb-3">Organigrama</h4>
-<form class="needs-validation" action="index.php?controller=usuarios&action=save" method="POST">
+<form class="needs-validation" action="index.php?controller=organigrama&action=save" method="POST">
     <div class="row g-3">
         <div class="col-12">
             <label for="area" class="form-label">&Aacute;rea</label>
