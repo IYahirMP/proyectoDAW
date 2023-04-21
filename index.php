@@ -7,6 +7,9 @@ require_once "config/parameters.php";
 require_once "views/layouts/header.php";
 require_once "views/layouts/aside.php";
 
+//Conexion de la base de datos
+$db = Database::connect();
+
 function show_error()
 {
     $error = new errorController();

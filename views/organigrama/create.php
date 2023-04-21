@@ -1,12 +1,12 @@
 <h1>Crear organigrama</h1>
 
 <h4 class="mb-3">Organigrama</h4>
-<form class="needs-validation" action="index.php?controller=organigrama&action=save" method="POST">
+<form class="needs-validation" action="<?= base_url ?>organigrama/save" method="POST">
     <div class="row g-3">
         <div class="col-12">
             <label for="area" class="form-label">&Aacute;rea</label>
             <div class="input-group has-validation">
-                <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario" required>
+                <input type="text" class="form-control" name="area" id="area" placeholder="Area" required>
             </div>
         </div>
 
@@ -17,7 +17,7 @@
 
         <div class="col-12">
             <label for="area_depende" class="form-label">Area_depende</label>
-            <input list="area_depende_listaa" class="form-control" id="area_depende" name="area_depende">
+            <input list="area_depende_lista" class="form-control" id="area_depende" name="area_depende">
             <datalist id="area_depende_lista">
                 <option valuer="1">
             </datalist>
