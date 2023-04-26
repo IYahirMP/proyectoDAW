@@ -15,6 +15,11 @@ class organigramaController
         require_once 'views/organigrama/create.php';
     }
 
+    public function read()
+    {
+        require_once 'views/organigrama/read.php';
+    }
+
     public function save()
     {
         if (isset($_POST)) {

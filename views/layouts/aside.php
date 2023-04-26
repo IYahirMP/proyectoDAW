@@ -21,6 +21,9 @@
                                 <li><a class="dropdown-item" href="<?= base_url ?>organigrama/read">Mostrar</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="<?= base_url ?>help/index">Acerca de</a>
+                        </li>
                     </ul>
                 </div>
             </div>
