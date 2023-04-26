@@ -12,11 +12,14 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="<?= base_url ?>">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="<?= base_url ?>organigrama/index">Index</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="<?= base_url ?>organigrama/create">Crear</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Organigrama
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="<?= base_url ?>organigrama/create">Agregar</a></li>
+                                <li><a class="dropdown-item" href="<?= base_url ?>organigrama/read">Mostrar</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
