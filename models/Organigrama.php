@@ -76,6 +76,22 @@ class Organigrama
         $this->titular = $this->db->real_escape_string($titular);
     }
 
+    public function read()
+    {
+        $sql = "SELECT organigrama.ID_ORGANIGRAMA,
+                    organigrama.AREA,
+                    organigrama.DESCRIPCION,
+                    area1.NOMBRE_AREA as AREA_DEPENDE,
+                    organigrama.NIVEL,
+                    area2.NOMBRE_AREA as TIPO_AREA,
+                    organigrama.TITULAR
+                    FROM organigrama
+                    INNER JOIN area area1 ON organigrama.AREA_DEPENDE = area1.ID_AREA
+                    INNER JOIN area area2 ON organigrama.TIPO_AREA = area2.ID_AREA;";
+        $datos = $this->db->query($sql);
+        return $datos;
+    }
+
     public function save()
     {
         $sql = "INSERT INTO organigrama (area, descripcion, area_depende, nivel, tipo_area, titular)

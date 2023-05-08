@@ -17,6 +17,8 @@ class organigramaController
 
     public function read()
     {
+        $db = new Organigrama();
+        $datos = $db->read();
         require_once 'views/organigrama/read.php';
     }
 
