@@ -1,6 +1,8 @@
 <?php
 
 require_once "models/Organigrama.php";
+require_once "models/Area.php";
+
 
 class organigramaController
 {
@@ -12,13 +14,22 @@ class organigramaController
 
     public function create()
     {
+        require_once("controllers/areaController.php");
+        $areaController = new areaController();
         require_once 'views/organigrama/create.php';
     }
 
     public function read()
     {
-        $db = new Organigrama();
-        $datos = $db->read();
+        $dbOrganigrama = new Organigrama();
+        $datos = $dbOrganigrama->read();
+        $dbArea = new Area();
+        $datosArea = $dbArea->readOne("0");
+        if ($datosArea->num_rows > 0) {
+            while ($asd = $datosArea->fetch_assoc()) {
+                var_dump($asd);
+            }
+        }
         require_once 'views/organigrama/read.php';
     }
 

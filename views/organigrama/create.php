@@ -17,10 +17,7 @@
 
         <div class="col-12">
             <label for="area_depende" class="form-label">Area_depende</label>
-            <input list="area_depende_lista" class="form-control" id="area_depende" name="area_depende">
-            <datalist id="area_depende_lista">
-                <option valuer="1">
-            </datalist>
+            <?php $areaController->select(); ?>
         </div>
 
         <div class="col-12">
@@ -30,7 +27,7 @@
 
         <div class="col-12">
             <label for="tipo_area" class="form-label">Tipo de &aacute;rea</label>
-            <input type="number" class="form-control" id="tipo_area" name="tipo_area">
+            <?php $areaController->select(); ?>
         </div>
 
         <div class="col-12">
