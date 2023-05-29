@@ -11,7 +11,7 @@ class areaController
         echo phpversion();
     }
 
-    public function select()
+    public function select($id)
     {
         $area = new Area();
         $datos = $area->read();

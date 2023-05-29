@@ -23,13 +23,6 @@ class organigramaController
     {
         $dbOrganigrama = new Organigrama();
         $datos = $dbOrganigrama->read();
-        $dbArea = new Area();
-        $datosArea = $dbArea->readOne("0");
-        if ($datosArea->num_rows > 0) {
-            while ($asd = $datosArea->fetch_assoc()) {
-                var_dump($asd);
-            }
-        }
         require_once 'views/organigrama/read.php';
     }
 
@@ -45,7 +38,6 @@ class organigramaController
 
             if ($area && $descripcion && $area_depende && $nivel && $tipo_area && $titular) {
                 $organigrama = new Organigrama();
-                echo "Prueba";
                 $organigrama->setArea($area);
                 $organigrama->setDescripcion($descripcion);
                 $organigrama->setArea_depende($area_depende);

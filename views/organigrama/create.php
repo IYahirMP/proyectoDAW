@@ -17,7 +17,7 @@
 
         <div class="col-12">
             <label for="area_depende" class="form-label">Area_depende</label>
-            <?php $areaController->select(); ?>
+            <?php $areaController->select("area_depende"); ?>
         </div>
 
         <div class="col-12">
@@ -27,7 +27,7 @@
 
         <div class="col-12">
             <label for="tipo_area" class="form-label">Tipo de &aacute;rea</label>
-            <?php $areaController->select(); ?>
+            <?php $areaController->select("tipo_area"); ?>
         </div>
 
         <div class="col-12">
